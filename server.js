@@ -18,7 +18,7 @@ function helloWorld(req, res, next){
 }
 
 app.use(logger);
-app.use('/hello', helloWorld);
+app.use('/hello', helloWorld );
 app.use('/goodbye', goodbyeWorld);
 
 app.listen(3000);
