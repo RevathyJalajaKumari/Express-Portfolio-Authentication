@@ -1,26 +1,62 @@
-const connect = require('connect');
-const app = connect();
+import debug from 'debug';
+debug('comp-229');
 
-// logger middleware
-function logger(req, res, next) {
-    console.log(req.method, req.url);
-    next();
+import http from 'http';
+
+// import the app 
+import app from './app/app.js';
+
+const PORT = normalizePort(process.env.PORT || 3000);
+app.set('port', PORT);
+
+const server = http.createServer(app);
+
+server.listen(PORT);
+server.on('error', onError);
+server.on('listening', onListening);
+
+
+// HELPER FUNCTIONS
+function normalizePort(val){
+    let port = parseInt(val, 10);
+
+    if(isNaN(port)){
+        return val;
+    }
+
+    if (port >= 0){
+        return port
+    }
+
+    return false;
 }
 
-function goodbyeWorld(req, res, next){
-    res.setHeader('Content-Type','text/html');
-    res.end('Goodbye World');
+function onError(){
+    if(error.syscall !== 'listen'){
+        throw error;
+    }
+
+    let bind = typeof port === 'string'
+        ? 'Pipe ' + port
+        : 'Port ' + port;
+
+    switch (error.code){
+        case 'EACCESS':
+            console.error(bind + ' requires elevated privileges');
+            process.exit(1);
+            break;
+        case 'EADDINUSE':
+            console.error(bind + ' is already in use');
+            process.exit(1);
+            break;
+        default:
+            throw error;
+    }
 }
 
-function helloWorld(req, res, next){
-    res.setHeader('Content-Type','text/html');
-    res.end('Hello World');
+function onListening(){
+    let addr = server.address();
+    let bind = 'pipe ' + addr;
+    debug('Listening on ' + bind);
+    console.log('Listening on ', addr);
 }
-
-app.use(logger);
-app.use('/hello', helloWorld );
-app.use('/goodbye', goodbyeWorld);
-
-app.listen(3000);
-
-console.log('Server running at http://localhost:3000');
