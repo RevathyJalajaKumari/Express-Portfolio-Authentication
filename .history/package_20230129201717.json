@@ -11,7 +11,7 @@
     "comp229",
     "w2023"
   ],
-  "author": "Revathy Jalaja Kumari",
+  "author": "Thiago Castilho",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",

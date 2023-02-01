@@ -11,7 +11,7 @@
 <main>
    
     <form method="post" action="/home">
-        <table class="contact" style="width: 100%" >
+        <table style="width: 100%">
             <tr>
                 <td><input name="txtFirstName" placeholder="Name" tabindex="1" type="text" ></td>
             </tr>
@@ -25,12 +25,13 @@
             </tr>
             
             <tr>
-                <td><textarea name="txtComments" placeholder="Message" rows="7" tabindex="15"></textarea></td>
+                <td><textarea cols="50" name="txtComments" placeholder="Message" rows="7" tabindex="15"></textarea></td>
             </tr>
             <tr>
                 <td class="fieldLabel ">
                 <input name="btnSubmit" type="submit" value="Send Message" tabindex="17"></td>
-                
+                <td>
+                <input name="btnReset" tabindex="19" type="reset" value="Clear Form"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>

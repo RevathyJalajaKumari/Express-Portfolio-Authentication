@@ -1,9 +1,5 @@
-
-body {
-   
-	margin: auto auto auto 50px; 
-  }
 th, td {
+
     padding: 10px;
     
   }
@@ -27,6 +23,4 @@ th, td {
  input[type=submit]:hover {
     background-color: #cfc8f1;
   }
-  textarea {
-    width: 50%;
-}
+  

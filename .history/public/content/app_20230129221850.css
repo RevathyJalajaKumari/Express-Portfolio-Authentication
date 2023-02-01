@@ -1,7 +1,7 @@
 
 body {
-   
-	margin: auto auto auto 50px; 
+    width: 960px;
+	margin: 0 auto; 
   }
 th, td {
     padding: 10px;
