@@ -20,8 +20,8 @@ th, td {
     width: 200px;
   }
   form { 
-    margin: 0auto; 
-    
+    margin: auto auto; 
+    width:50%;
     }
   input[type=text],[type=email]{
     width: 50%;

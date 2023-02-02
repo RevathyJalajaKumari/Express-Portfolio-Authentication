@@ -1,7 +1,7 @@
 
 body {
    
-	margin: auto auto auto 10px; 
+	margin: auto auto auto 50px; 
   }
 th, td {
     padding: 10px;
@@ -20,8 +20,8 @@ th, td {
     width: 200px;
   }
   form { 
-    margin: 0auto; 
-    
+    margin: 0 auto; 
+    width:250px;
     }
   input[type=text],[type=email]{
     width: 50%;

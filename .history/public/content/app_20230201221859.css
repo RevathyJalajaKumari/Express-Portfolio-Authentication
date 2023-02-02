@@ -20,7 +20,7 @@ th, td {
     width: 200px;
   }
   form { 
-    margin: 0auto; 
+    margin:  100 auto; 
     
     }
   input[type=text],[type=email]{

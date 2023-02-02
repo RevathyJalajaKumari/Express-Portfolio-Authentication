@@ -1,7 +1,7 @@
 
 body {
    
-	margin: auto auto auto 10px; 
+	margin: auto auto auto 50px; 
   }
 th, td {
     padding: 10px;
@@ -10,19 +10,12 @@ th, td {
   img {
     border-radius: 50%;
   }
-  h1 ,p{
-    text-align: center;
-  }
   .contact {
     color: white;
     margin: 20px;
     padding: 20px;
     width: 200px;
   }
-  form { 
-    margin: 0auto; 
-    
-    }
   input[type=text],[type=email]{
     width: 50%;
     padding: 5px 20px;

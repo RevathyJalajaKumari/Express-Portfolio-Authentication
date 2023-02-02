@@ -1,7 +1,7 @@
 {
-  "name": "personal-portfolio",
+  "name": "comp229-w2023-week2",
   "version": "0.0.1",
-  "description": "Personal Portfolio",
+  "description": "this is my application for week 2",
   "main": "server.js",
   "type": "module",
   "scripts": {
