@@ -62,12 +62,11 @@ button.right {
   background-color: black;
 }
 
-div.prjpage {
+div.prjpage, table.prjpage {
   margin-left: 200px;
   margin-right: 160px;
 }
-
-.pagealign{
+table.contactpage {
   margin-left: 400px;
   margin-right: 400px;
 }
