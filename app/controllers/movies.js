@@ -1,6 +1,6 @@
 import movieModel from '../models/movies.js';
 
-//import { UserDisplayName } from "../utils/index.js";
+import { UserDisplayName } from "../utils/index.js";
 
 //R ead Operations
 export function DisplayMoviesList(req, res, next){
@@ -15,21 +15,16 @@ export function DisplayMoviesList(req, res, next){
         res.render('index', {title: 'Movie List', 
             page: 'movies/list', 
             movies: movieCollection,
-           // displayName: UserDisplayName(req)  
+            displayName: UserDisplayName(req)  
         })
     })
 }
 
 
 //C reate
-/*export function DisplayMoviesAddPage(req, res, next){
+export function DisplayMoviesAddPage(req, res, next){
     res.render('index', {title: 'Add Movie', page: 'movies/edit', movie: {},
     displayName: UserDisplayName(req)})
-}*/
-
-export function DisplayMoviesAddPage(req, res, next){
-    res.render('index', {title: 'Add Movie', page: 'movies/edit', movie: {}
-    })
 }
 
 export function ProcessMoviesAddPage(req, res, next){
@@ -62,11 +57,8 @@ export function DisplayMoviesEditPage(req, res, next){
             res.end(error);
         }
 
-        res.render('index', {title: 'Edit Movie', page: 'movies/edit', movie
-        })
-
-        //res.render('index', {title: 'Edit Movie', page: 'movies/edit', movie,
-       // displayName: UserDisplayName(req)})
+       res.render('index', {title: 'Edit Movie', page: 'movies/edit', movie,
+       displayName: UserDisplayName(req)})
     })    
 }
 
