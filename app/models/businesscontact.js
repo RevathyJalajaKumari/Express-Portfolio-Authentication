@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const BusinessContactSchema = new Schema({
-    username: String,
+    contactname: String,
     contactnumber: Number,
     emailaddress: String
 }, {
