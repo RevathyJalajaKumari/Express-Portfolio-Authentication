@@ -1,4 +1,4 @@
-import debug from 'debug';
+import debug from 'debug'
 debug('comp-229');
 
 import http from 'http';

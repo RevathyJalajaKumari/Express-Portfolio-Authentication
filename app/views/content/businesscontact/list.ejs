@@ -1,0 +1,42 @@
+<div class="container">
+    <h1><%=title %></h1>
+    <a href="/contact-add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add a Contact
+    </a>
+    <div class="row">
+        <div class="column">
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" class="text-center">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contactList">
+                    <% for(let count=0; count < businesscontact.length; count++) { %>                   
+                        <tr>
+                            <td scope="row" class="text-center"></td>
+                            <td><%= businesscontact[count].contactname %></td>
+                            <td><%= businesscontact[count].contactnumber %></td>
+                            <td><%= businesscontact[count].emailaddress %></td>
+                            <td class="text-center col-1">
+                                <a class="btn btn-primary" href="/contact-edit/<%= businesscontact[count].id %>">
+                                    Edit
+                                </a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a class="btn btn-warning" href="/contact-delete/<%= businesscontact[count].id %>">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

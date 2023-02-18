@@ -29,6 +29,7 @@ import { Secret, MongoURI } from '../config/index.js';
 import indexRouter from '../app/routes/index.js';
 import moviesRouter from '../app/routes/movies.js';
 import authRouter from '../app/routes/auth.js';
+import contactRouter from '../app/routes/businesscontact.js';
 
 // Complete DB Configuration
 mongoose.connect(MongoURI);
@@ -81,5 +82,6 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/',indexRouter);
 app.use('/', moviesRouter);
 app.use('/', authRouter);
+app.use('/',contactRouter);
 
 export default app;
